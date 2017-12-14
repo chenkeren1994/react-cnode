@@ -2,9 +2,9 @@
  * Created by seal on 12/9/17.
  */
 
-import { Link } from 'react-router-dom'
 import React from 'react'
 import Routes from '../config/router'
+import MainAppBar from './layout/app-bar'
 
 export default class App extends React.Component {
   componentDidMount() {
@@ -12,11 +12,7 @@ export default class App extends React.Component {
   }
   render() {
     return [
-      <div key="banner">
-        <Link to="/">首页</Link>
-        <br />
-        <Link to="/detail">详情页</Link>
-      </div>,
+      <MainAppBar key="app-bar" />,
       <Routes key="routes" />,
     ]
   }
